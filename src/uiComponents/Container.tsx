@@ -22,7 +22,7 @@ const ContainerUI = ({
 );
 
 export default defineComponent({
-  name: 'Container',
+  name: 'VContainer',
   setup(_, { slots, attrs }) {
     return () => ContainerUI({ children: slots.default?.(), ...attrs });
   },

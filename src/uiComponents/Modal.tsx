@@ -182,7 +182,7 @@ const ModalUI = ({
 };
 
 export default defineComponent({
-  name: 'Modal',
+  name: 'VModal',
   props: {
     modelValue: {
       type: Boolean,

@@ -232,7 +232,7 @@ const DrawerUI = ({
 };
 
 export default defineComponent({
-  name: 'Drawer',
+  name: 'VDrawer',
   props: {
     modelValue: {
       type: Boolean,

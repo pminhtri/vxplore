@@ -18,7 +18,7 @@ const CenterUI = ({ children, ...props }: CenterProps): JSX.Element => (
 );
 
 export default defineComponent({
-  name: 'Center',
+  name: 'VCenter',
   setup(_, { slots, attrs }) {
     return () => CenterUI({ children: slots.default?.(), ...attrs });
   },
