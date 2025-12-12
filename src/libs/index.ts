@@ -1,2 +1,2 @@
 export * from './apiClient';
-export * from './tailwind';
+export * from './tw';

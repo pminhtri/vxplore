@@ -15,7 +15,7 @@ const ContainerUI = ({
 }: ContainerProps): JSX.Element => (
   <div
     {...props}
-    class={cn('h-screen flex justify-center items-center', className)}
+    class={cn('flex w-screen h-screen justify-center items-center', className)}
   >
     {children}
   </div>

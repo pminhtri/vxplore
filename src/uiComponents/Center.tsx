@@ -11,7 +11,10 @@ interface CenterProps extends HTMLDivProps {
 const CenterUI = ({ children, ...props }: CenterProps): JSX.Element => (
   <div
     {...props}
-    class={cn('flex w-full h-full justify-center items-center', props.class)}
+    class={cn(
+      'flex w-full h-full flex-1 justify-center items-center',
+      props.class,
+    )}
   >
     {children}
   </div>

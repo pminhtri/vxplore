@@ -1,3 +1,11 @@
 @import 'tailwindcss';
 
 @custom-variant dark (&:where(.dark, .dark *));
+
+@layer base {
+  html,
+  body,
+  #app {
+    @apply w-dvh h-dvh m-0 p-0;
+  }
+}
