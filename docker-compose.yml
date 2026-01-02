@@ -4,16 +4,18 @@ services:
       context: .
       dockerfile: Dockerfile
     container_name: vxplore-frontend
-    ports:
-      - '80:80'
-      - '443:80'
-      - '443:443/udp'
     volumes:
       - ./Caddyfile:/etc/caddy/Caddyfile:ro
       - caddy_logs:/var/log/caddy
     restart: always
     networks:
-      - web-net
+      - public-net
+
+    deploy:
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 512M
 
     logging:
       driver: 'json-file'
@@ -22,7 +24,8 @@ services:
         max-file: '3'
 
 networks:
-  web-net:
+  public-net:
+    name: public-net
     driver: bridge
 
 volumes:
