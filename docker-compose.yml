@@ -1,5 +1,5 @@
 services:
-  vxplore:
+  frontend:
     build:
       context: .
       dockerfile: Dockerfile
@@ -13,7 +13,7 @@ services:
       - caddy_logs:/var/log/caddy
     restart: always
     networks:
-      - vxplore-net
+      - web-net
 
     logging:
       driver: 'json-file'
@@ -22,7 +22,7 @@ services:
         max-file: '3'
 
 networks:
-  vxplore-net:
+  web-net:
     driver: bridge
 
 volumes:
