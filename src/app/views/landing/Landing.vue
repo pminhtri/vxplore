@@ -27,7 +27,7 @@ const currentYear = getYear(new Date());
               class="text-4xl md:text-5xl lg:text-6xl font-extrabold bg-clip-text text-transparent bg-linear-to-r from-gray-900 to-gray-600"
             >
               Welcome to
-              <span class="text-indigo-600">Nexus</span>
+              <span class="text-indigo-600">VXplore</span>
             </h1>
 
             <p
