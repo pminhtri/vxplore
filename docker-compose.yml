@@ -1,0 +1,29 @@
+services:
+  vxplore:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: vxplore-frontend
+    ports:
+      - '80:80'
+      - '443:80'
+      - '443:443/udp'
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy_logs:/var/log/caddy
+    restart: always
+    networks:
+      - vxplore-net
+
+    logging:
+      driver: 'json-file'
+      options:
+        max-size: '10m'
+        max-file: '3'
+
+networks:
+  vxplore-net:
+    driver: bridge
+
+volumes:
+  caddy_logs:
